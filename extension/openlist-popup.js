@@ -6,7 +6,12 @@ function initPopup() {
             var listTextArea = document.getElementById("list");
 
             for (var i=0; i<tabs.length; ++i) {
-                listTextArea.value += tabs[i].url + "\n";
+		if (tabs[i].url.startsWith('chrome-extension://'))
+		    url = tabs[i].url.split('&uri=')[1]
+		else
+		    url = tabs[i].url
+
+                listTextArea.value += " - [" + tabs[i].title + "](" + url + ")\n";
             }
 
             if (location.search != "?focusHack") location.search = "?focusHack";
