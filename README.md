@@ -1,3 +1,13 @@
+# OpenListMarkdown Chrome Extension
+
+Forked from [cdzombak/OpenList](https://github.com/cdzombak/OpenList).
+
+Modified to output tab list as Markdown.
+
+---
+
+## Original README.md ...
+
 # OpenList Chrome Extension
 
 OpenList helps you manage lists of URLs. It's useful if you have a habit of emailing yourself lists of articles or pages to check out later.
