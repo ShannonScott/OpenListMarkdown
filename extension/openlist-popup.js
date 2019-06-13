@@ -5,11 +5,17 @@ function initPopup() {
 
             var listTextArea = document.getElementById("list");
 
+            chrome.storage.sync.get({formatType: 'markdown'}, function(result) {
+                listTextArea.value += 'Value currently is ' + result.key + '\n\n';
+            });
+
+            listTextArea.value += 'This is a test\n\n';
+
             for (var i=0; i<tabs.length; ++i) {
-		if (tabs[i].url.startsWith('chrome-extension://'))
-		    url = tabs[i].url.split('&uri=')[1]
-		else
-		    url = tabs[i].url
+		        if (tabs[i].url.startsWith('chrome-extension://'))
+		            url = tabs[i].url.split('&uri=')[1]
+		        else
+		            url = tabs[i].url
 
                 listTextArea.value += " - [" + tabs[i].title + "](" + url + ")\n";
             }
