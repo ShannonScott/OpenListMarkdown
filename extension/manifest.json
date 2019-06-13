@@ -11,7 +11,8 @@
   "homepage_url": "https://github.com/cdzombak/OpenList",
   "permissions": [
     "contextMenus",
-    "tabs"
+      "tabs",
+      "storage"
   ],
   "browser_action": {
     "default_icon":  "icon/icon-48.png",
@@ -22,5 +23,6 @@
     "16": "icon/icon-16.png",
     "48": "icon/icon-48.png",
     "128": "icon/icon-128.png"
-  }
+  },
+  "options_page": "options.html"
 }
