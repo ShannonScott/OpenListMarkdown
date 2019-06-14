@@ -8,7 +8,7 @@ function initPopup() {
             // Get optional output format
             var format = localStorage.getItem('format')
 
-            listTextArea.value += 'Debug:' + format + '\n\n';
+            //listTextArea.value += 'Debug:' + format + '\n\n';
 
             for (var i=0; i<tabs.length; ++i) {
                 if (tabs[i].url.startsWith('chrome-extension://'))
