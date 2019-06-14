@@ -1,14 +1,15 @@
 // Saves options to chrome.storage
 function save_options() {
-  var formatType = document.getElementById('format').value;
-  chrome.storage.sync.set({formatType: formatType}, function() {
+  var formatValue = document.getElementById('format').value;
+  /*chrome.storage.sync.set({formatType: formatType}, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
     status.textContent = 'Options saved.';
     setTimeout(function() {
       status.textContent = '';
     }, 750);
-  });
+  });*/
+  localStorage.setItem('format', formatValue)
 }
 
 // Restores select box and checkbox state using the preferences
